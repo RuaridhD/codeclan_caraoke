@@ -8,8 +8,8 @@ require_relative("../guest.rb")
 class TestSong < MiniTest::Test
 
   def setup()
-    @room1 = Room.new("Upstairs Lounge", 4, 100)
-    @room2 = Room.new("Downstairs Lounge", 6, 200)
+    @room1 = Room.new("Upstairs Lounge", 2, 100, 5)
+    @room2 = Room.new("Downstairs Lounge", 6, 200, 10)
 
     @guest1 = Guest.new("Bob", 100, "Sweet Home Alabama")
     # @guest2 = Guest.new("Dot", 150, "Sweet Caroline")

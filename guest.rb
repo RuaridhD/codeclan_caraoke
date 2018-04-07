@@ -16,5 +16,9 @@ class Guest
     return guest.shift()
   end
 
+  def pay_entry_fee(room)
+    @wallet -= room.entry_fee
+  end
+
 
 end

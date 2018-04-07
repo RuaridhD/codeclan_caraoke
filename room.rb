@@ -1,11 +1,12 @@
 class Room
 
-attr_accessor :name, :max_occupancy, :till_balance
+attr_accessor :name, :max_occupancy, :till_balance, :entry_fee
 
-def initialize (name, max_occupancy, till_balance)
+def initialize (name, max_occupancy, till_balance, entry_fee)
 @name = name
 @max_occupancy = max_occupancy
 @till_balance = till_balance
+@entry_fee = entry_fee
 @guests_in_room = []
 @songs_playing = []
 end
@@ -37,6 +38,10 @@ def check_occupancy()
   else
     return false
   end
+end
+
+def get_entry_fee(room)
+  @till_balance += room.entry_fee
 end
 
 end
